@@ -42,6 +42,7 @@ const App: React.FC = () => {
               </div>
               {loading && <p>Loading...</p>}
               {error && <p>Error: {error}</p>}
+              {!loading && cards?.length === 0 && <p>Not found any card</p>}
               {!loading && !error && <CardGrid cards={cards} />}
               {totalPages > 0 && !loading && (
                 <Pagination

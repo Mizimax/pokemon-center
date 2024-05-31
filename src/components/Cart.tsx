@@ -20,7 +20,7 @@ const Cart: React.FC = () => {
       <a onClick={clearCart} href="#" className="underline">
         Clear all
       </a>
-      {cartItems.length === 0 ? (
+      {cartItems?.length === 0 ? (
         <p className="text-center mt-4">Cart is empty</p>
       ) : (
         <>

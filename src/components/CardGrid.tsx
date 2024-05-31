@@ -17,13 +17,13 @@ const CardGrid: React.FC<CardGridProps> = ({ cards = [] }) => {
           key={card.id}
           name={card.name}
           imageUrl={card.images.small}
-          price={card.cardmarket.prices.averageSellPrice}
+          price={card.cardmarket?.prices.averageSellPrice}
           quantity={card.set.total}
           onAddToCart={() =>
             addToCart({
               id: card.id,
               name: card.name,
-              price: card.cardmarket.prices.averageSellPrice,
+              price: card.cardmarket?.prices.averageSellPrice,
               quantity: 1,
               images: {
                 small: card.images.small,
